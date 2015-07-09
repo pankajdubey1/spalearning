@@ -1,26 +1,25 @@
     <!DOCTYPE html>
-    <html ng-app="scotchApp">
+    <html ng-app="myApp">
     <head>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="lib/angular/angular.min.js"></script>
+      <script src="lib/angular/angular-route.js"></script>
+      
       <script src="app/js/app.js"></script>
       <script src="app/js/spa.js"></script>
       <script src="app/js/controller.js"></script>
+      
+      <script src="lib/jquery/jquery.js"></script>
+      <script src="lib/jquery/jquery-ui.js"></script>
     </head>
-    <body ng-controller="mainController">        
-                <ul>
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-                </ul>
-                <form >
-                Enter : <input type="text" name="name" ng-bind="name"><br>
-                <input type="submit" name="submit" value="submit">
-                </form>
-        <div id="main">
+    <body ng-controller="homeCtrl">        
+              
+          <div id="main">
            <div ng-view></div>
-            {{ message }}
             
-        </div>
+            <div id="indicator">
+				<img src="app/img/loading.gif" class="loading-indicator" />
+			</div>
+			
+          </div>
     </body>
     </html>

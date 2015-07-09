@@ -1,6 +1,12 @@
-var scotchApp = angular.module('scotchApp', ['ngRoute']);    
-    scotchApp.run(function($http, $rootScope, $location) {
-    	$rootScope.loadPage = function(template) {
-    		$location.path(template);
-    	}  	
-    });
+ var myApp = angular.module('myApp', ['ngRoute']);
+ 
+     myApp.run(function($http, $rootScope, $location){
+    	 
+    	 $rootScope.loadPage = function(template){
+    		 
+    		 $location.path(template);
+    	 };
+    	 
+    	 $('#indicator').hide();
+    	 
+     });
